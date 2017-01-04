@@ -1,0 +1,15 @@
+﻿namespace CSProtocol
+{
+    using System;
+
+    public enum CS_HUOYUEDUREWARD_ERR
+    {
+        CS_HUOYUEDUREWARD_SUCC,
+        CS_HUOYUEDUREWARD_ACNTNULL,
+        CS_HUOYUEDUREWARD_INFONULL,
+        CS_HUOYUEDUREWARD_NOTINTABLE,
+        CS_HUOYUEDUREWARD_NOTENOUGH,
+        CS_HUOYUEDUREWARD_GETED
+    }
+}
+

@@ -1,0 +1,12 @@
+﻿namespace CSProtocol
+{
+    using System;
+
+    public enum COM_APOLLO_TVOIP_USERBUFFER_TYPE
+    {
+        COM_APOLLO_TVOIP_USERBUFFER_TYPE_NULL,
+        COM_APOLLO_TVOIP_USERBUFFER_TYPE_CREATE_ROOM,
+        COM_APOLLO_TVOIP_USERBUFFER_TYPE_JOIN_ROOM
+    }
+}
+

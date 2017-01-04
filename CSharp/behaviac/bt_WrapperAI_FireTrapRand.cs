@@ -1,0 +1,120 @@
+﻿namespace behaviac
+{
+    using System;
+
+    public static class bt_WrapperAI_FireTrapRand
+    {
+        public static bool build_behavior_tree(BehaviorTree bt)
+        {
+            bt.SetClassNameString("BehaviorTree");
+            bt.SetId(-1);
+            bt.SetName("WrapperAI/FireTrapRand");
+            bt.AddPar("Assets.Scripts.GameLogic.SkillSlotType", "p_curSlotType", "SLOT_SKILL_0", string.Empty);
+            bt.AddPar("uint", "p_targetID", "0", string.Empty);
+            bt.AddPar("int", "p_srchRange", "0", string.Empty);
+            bt.AddPar("UnityEngine.Vector3", "p_AttackMoveDest", "{kEpsilon=0;x=0;y=0;z=0;}", string.Empty);
+            bt.AddPar("bool", "p_IsAttackMove_Attack", "false", string.Empty);
+            bt.AddPar("bool", "p_AttackIsFinished", "true", string.Empty);
+            bt.AddPar("uint", "p_CmdID", "0", string.Empty);
+            bt.AddPar("UnityEngine.Vector3", "p_attackPathCurTargetPos", "{kEpsilon=0;x=0;y=0;z=0;}", string.Empty);
+            bt.AddPar("int", "p_waitFrame", "0", string.Empty);
+            DecoratorLoop_bt_WrapperAI_FireTrapRand_node14 pChild = new DecoratorLoop_bt_WrapperAI_FireTrapRand_node14();
+            pChild.SetClassNameString("DecoratorLoop");
+            pChild.SetId(14);
+            bt.AddChild(pChild);
+            SelectorLoop loop = new SelectorLoop();
+            loop.SetClassNameString("SelectorLoop");
+            loop.SetId(7);
+            pChild.AddChild(loop);
+            WithPrecondition precondition = new WithPrecondition();
+            precondition.SetClassNameString("WithPrecondition");
+            precondition.SetId(11);
+            loop.AddChild(precondition);
+            Or or = new Or();
+            or.SetClassNameString("Or");
+            or.SetId(1);
+            precondition.AddChild(or);
+            Condition_bt_WrapperAI_FireTrapRand_node12 _node2 = new Condition_bt_WrapperAI_FireTrapRand_node12();
+            _node2.SetClassNameString("Condition");
+            _node2.SetId(12);
+            or.AddChild(_node2);
+            or.SetHasEvents(or.HasEvents() | _node2.HasEvents());
+            Condition_bt_WrapperAI_FireTrapRand_node2 _node3 = new Condition_bt_WrapperAI_FireTrapRand_node2();
+            _node3.SetClassNameString("Condition");
+            _node3.SetId(2);
+            or.AddChild(_node3);
+            or.SetHasEvents(or.HasEvents() | _node3.HasEvents());
+            Condition_bt_WrapperAI_FireTrapRand_node3 _node4 = new Condition_bt_WrapperAI_FireTrapRand_node3();
+            _node4.SetClassNameString("Condition");
+            _node4.SetId(3);
+            or.AddChild(_node4);
+            or.SetHasEvents(or.HasEvents() | _node4.HasEvents());
+            precondition.SetHasEvents(precondition.HasEvents() | or.HasEvents());
+            Sequence sequence = new Sequence();
+            sequence.SetClassNameString("Sequence");
+            sequence.SetId(0x51);
+            precondition.AddChild(sequence);
+            Sequence sequence2 = new Sequence();
+            sequence2.SetClassNameString("Sequence");
+            sequence2.SetId(0x56);
+            sequence.AddChild(sequence2);
+            Condition_bt_WrapperAI_FireTrapRand_node30 _node5 = new Condition_bt_WrapperAI_FireTrapRand_node30();
+            _node5.SetClassNameString("Condition");
+            _node5.SetId(30);
+            sequence2.AddChild(_node5);
+            sequence2.SetHasEvents(sequence2.HasEvents() | _node5.HasEvents());
+            Action_bt_WrapperAI_FireTrapRand_node88 _node6 = new Action_bt_WrapperAI_FireTrapRand_node88();
+            _node6.SetClassNameString("Action");
+            _node6.SetId(0x58);
+            sequence2.AddChild(_node6);
+            sequence2.SetHasEvents(sequence2.HasEvents() | _node6.HasEvents());
+            Action_bt_WrapperAI_FireTrapRand_node91 _node7 = new Action_bt_WrapperAI_FireTrapRand_node91();
+            _node7.SetClassNameString("Action");
+            _node7.SetId(0x5b);
+            sequence2.AddChild(_node7);
+            sequence2.SetHasEvents(sequence2.HasEvents() | _node7.HasEvents());
+            DecoratorLoopUntil_bt_WrapperAI_FireTrapRand_node92 _node8 = new DecoratorLoopUntil_bt_WrapperAI_FireTrapRand_node92();
+            _node8.SetClassNameString("DecoratorLoopUntil");
+            _node8.SetId(0x5c);
+            sequence2.AddChild(_node8);
+            Condition_bt_WrapperAI_FireTrapRand_node93 _node9 = new Condition_bt_WrapperAI_FireTrapRand_node93();
+            _node9.SetClassNameString("Condition");
+            _node9.SetId(0x5d);
+            _node8.AddChild(_node9);
+            _node8.SetHasEvents(_node8.HasEvents() | _node9.HasEvents());
+            sequence2.SetHasEvents(sequence2.HasEvents() | _node8.HasEvents());
+            sequence.SetHasEvents(sequence.HasEvents() | sequence2.HasEvents());
+            DecoratorLoopUntil_bt_WrapperAI_FireTrapRand_node4 _node10 = new DecoratorLoopUntil_bt_WrapperAI_FireTrapRand_node4();
+            _node10.SetClassNameString("DecoratorLoopUntil");
+            _node10.SetId(4);
+            sequence.AddChild(_node10);
+            Condition_bt_WrapperAI_FireTrapRand_node6 _node11 = new Condition_bt_WrapperAI_FireTrapRand_node6();
+            _node11.SetClassNameString("Condition");
+            _node11.SetId(6);
+            _node10.AddChild(_node11);
+            _node10.SetHasEvents(_node10.HasEvents() | _node11.HasEvents());
+            sequence.SetHasEvents(sequence.HasEvents() | _node10.HasEvents());
+            Sequence sequence3 = new Sequence();
+            sequence3.SetClassNameString("Sequence");
+            sequence3.SetId(8);
+            sequence.AddChild(sequence3);
+            Compute_bt_WrapperAI_FireTrapRand_node0 _node12 = new Compute_bt_WrapperAI_FireTrapRand_node0();
+            _node12.SetClassNameString("Compute");
+            _node12.SetId(0);
+            sequence3.AddChild(_node12);
+            sequence3.SetHasEvents(sequence3.HasEvents() | _node12.HasEvents());
+            WaitFrames_bt_WrapperAI_FireTrapRand_node5 _node13 = new WaitFrames_bt_WrapperAI_FireTrapRand_node5();
+            _node13.SetClassNameString("WaitFrames");
+            _node13.SetId(5);
+            sequence3.AddChild(_node13);
+            sequence3.SetHasEvents(sequence3.HasEvents() | _node13.HasEvents());
+            sequence.SetHasEvents(sequence.HasEvents() | sequence3.HasEvents());
+            precondition.SetHasEvents(precondition.HasEvents() | sequence.HasEvents());
+            loop.SetHasEvents(loop.HasEvents() | precondition.HasEvents());
+            pChild.SetHasEvents(pChild.HasEvents() | loop.HasEvents());
+            bt.SetHasEvents(bt.HasEvents() | pChild.HasEvents());
+            return true;
+        }
+    }
+}
+
